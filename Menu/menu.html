@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller="menuCtrl">
+
+<input type="checkbox" id="op"/>
+
+<div class="lower" ng-click="loadMenu()">
+    <label for="op" >
+        <img src="resources/imgs/menu.png" class="menu-icon-aywa">
+    </label>
+
+</div>
+<div class="overlay overlay-hugeinc">
+    <label for="op" class="x-icon-menu-aywa"></label>
+    <nav>
+        <ul class="list-menu-items-aywa">
+            <li class="menu-item-aywa" ng-repeat="item in menu">
+                <a href="{{item.href}}">{{item.title}}</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!--AngularJs-->
+<script src="resources/js/angular/angular.min.js"></script>
+<script src="resources/js/angular-route/angular-route.min.js"></script>
+
+
+<script src="scripts/app.js"></script>
+<!--Begin Controllers-->
+
+<script src="scripts/controllers/menuCtrl.js"></script>
+
+<!--End Controllers-->
+
+
+<!--Begin Models-->
+
+
+
+<!--End Models-->
+
+
+<!--Begin Services-->
+
+<script src="scripts/services/menuService.js"></script>
+
+<!--End Services-->
+
+
+<!--Begin Directives-->
+
+<script src="scripts/directives/menuDirective.js"></script>
+
+<!--<script src="scripts/directives/...."></script>-->
+
+<!--End Directives-->
+
+</body>
+</html>
